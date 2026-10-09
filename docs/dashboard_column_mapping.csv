@@ -1,0 +1,20 @@
+source_file,source_column,dashboard_field,data_type,description,recommended_visual
+outputs/churn_scores.csv,customer_id,Customer ID,text,Unique customer identifier,Table
+outputs/churn_scores.csv,churn_actual,Actual Churn,text,Historical churn label (Yes or No),KPI and validation cards
+outputs/churn_scores.csv,churn_flag,Actual Churn Flag,number,Binary churn label (1 churned, 0 retained),KPI and bar charts
+outputs/churn_scores.csv,churn_risk_score,Predicted Churn Risk,decimal,Predicted churn probability from model (0 to 1),"KPI, table heat, histogram"
+outputs/churn_scores.csv,churn_risk_band,Risk Band,text,Risk segment derived from score (High/Medium/Low),Donut chart and stacked bar
+outputs/churn_scores.csv,tenure,Tenure (Months),number,Customer tenure in months,Histogram and bucketed bar chart
+outputs/churn_scores.csv,contract,Contract Type,text,Customer contract type (Month-to-month/One year/Two year),Bar chart
+outputs/churn_scores.csv,payment_method,Payment Method,text,Billing payment method,Bar chart
+outputs/churn_scores.csv,internet_service,Internet Service,text,Internet service type,Bar chart
+outputs/churn_scores.csv,monthly_charges,Monthly Charges,currency,Monthly recurring charges,Box plot and KPI
+outputs/churn_scores.csv,total_charges,Total Charges,currency,Accumulated charges to date,Box plot and trend/bucket chart
+outputs/model_metrics.csv,model,Model Name,text,Model identifier used during evaluation,Comparison table
+outputs/model_metrics.csv,roc_auc,ROC-AUC,decimal,Ranking metric for classification quality,Model comparison bar chart
+outputs/model_metrics.csv,accuracy,Accuracy,decimal,Overall classification accuracy,Model comparison bar chart
+outputs/model_metrics.csv,precision,Precision,decimal,Positive prediction quality,Model comparison bar chart
+outputs/model_metrics.csv,recall,Recall,decimal,Captured churn positives,Model comparison bar chart
+outputs/model_metrics.csv,f1,F1 Score,decimal,Balance of precision and recall,Model comparison bar chart
+outputs/feature_importance.csv,feature,Feature,text,Feature name used by the selected model,Feature importance bar chart
+outputs/feature_importance.csv,importance,Importance Score,decimal,Relative contribution of the feature,Feature importance bar chart
